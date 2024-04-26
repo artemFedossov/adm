@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda Digital Multifunción</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <main>
+        <header>
+            <div>
+                <h1>A.D.M.</h1>
+            </div>
+            <div>
+                <h2>Bienvenido </h2>
+                <div>Fecha</div>
+            </div>
+            <div>
+                <div>claro/oscuro</div>
+            </div>
+        </header>
+
+        <div class="bloque">
+            <div id="clima"></div>
+            <div id="traductor">
+                <textarea name="texto" id="entradaTexto" cols="20" rows="4"></textarea>
+                <textarea name="texto traducido" id="salidaTexto" readonly cols="20" rows="4"></textarea>
+                <select name="ideoma" id="selectA">
+                    <option value="">Seleccione Ideoma</option>
+                </select>
+                <select name="ideoma" id="selectB">
+                    <option value="">Seleccione Ideoma</option>
+                </select>
+                <button id="traducir">Traducir</button>
+            </div>
+            <div id="convertidor">
+                <select name="moneda" id="monedaA">
+                    <option value="">Selecciones Moneda</option>
+                </select>
+                <input type="number" id="entradaMoneda">
+                <select name="moneda" id="monedaB">
+                    <option value="">Selecciones Moneda</option>
+                </select>
+                <input type="number" id="salidaMoneda" readonly>
+            </div>
+            <div id="dado">
+                <div class="columnApuesta">
+                    <label for="">$3000</label>
+                    <label for="">Apuesta</label>
+                    <input type="number">
+                    <label for="">Jugada</label>
+                    <select name="" id="">
+                        <option value="">Negro</option>
+                        <option value="">Rojo</option>
+                        <option value="">Par</option>
+                        <option value="">Impar</option>
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4</option>
+                        <option value="">5</option>
+                        <option value="">6</option>
+                    </select>
+                </div>
+                <div>
+                    <p>Mini Juego</p>
+                    <img src="" alt="">
+                    <button>Suerte</button>
+                </div>
+                <div>
+                    <p>ultimas jugadas</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div>
+            <p>notas</p>
+        </div>
+    </main>
+    <script src="js/clima.js"></script>
+    <script src="js/traductor.js"></script>
+    <script src="js/convertidor.js"></script>
+</body>
+</html>

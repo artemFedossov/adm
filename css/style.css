@@ -1,0 +1,29 @@
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.bloque {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#clima {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#dado {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.columnApuesta {
+    display: flex;
+    flex-direction: column;
+}
