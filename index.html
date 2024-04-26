@@ -47,32 +47,32 @@
             </div>
             <div id="dado">
                 <div class="columnApuesta">
-                    <label for="">$3000</label>
+                    <label for="" id="saldo">3000</label>
                     <label for="">Apuesta</label>
-                    <input type="number">
+                    <input type="numer" id="apuesta">
                     <label for="">Jugada</label>
-                    <select name="" id="">
-                        <option value="">Negro</option>
-                        <option value="">Rojo</option>
-                        <option value="">Par</option>
-                        <option value="">Impar</option>
-                        <option value="">1</option>
-                        <option value="">2</option>
-                        <option value="">3</option>
-                        <option value="">4</option>
-                        <option value="">5</option>
-                        <option value="">6</option>
+                    <select id="jugada">
+                        <option value="negro">Negro</option>
+                        <option value="rojo">Rojo</option>
+                        <option value="par">Par</option>
+                        <option value="impar">Impar</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
                     </select>
                 </div>
                 <div>
                     <p>Mini Juego</p>
+                    <div id="numero"></div>
                     <img src="" alt="">
-                    <button>Suerte</button>
+                    <button id="tirar">Suerte</button>
                 </div>
                 <div>
-                    <p>ultimas jugadas</p>
+                    <p id="ultimaJugada">ultimas jugadas</p>
                 </div>
-
             </div>
         </div>
 
@@ -80,8 +80,9 @@
             <p>notas</p>
         </div>
     </main>
-    <script src="js/clima.js"></script>
+    <!-- <script src="js/clima.js"></script> 
     <script src="js/traductor.js"></script>
-    <script src="js/convertidor.js"></script>
+    <script src="js/convertidor.js"></script> -->
+    <script src="js/dado.js"></script> 
 </body>
 </html>

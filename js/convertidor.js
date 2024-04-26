@@ -51,7 +51,6 @@ fetch(getCambio, options)
 	.then(response => response.json())
 	.then(data => {
 		aux = data.rates
-		console.log(aux)
 
 		entradaMoneda.addEventListener('click', () => {
 
