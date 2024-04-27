@@ -3,7 +3,9 @@ const apuesta = document.querySelector('#apuesta');
 const jugada = document.querySelector('#jugada');
 const numero = document.querySelector('#numero');
 const tirar = document.querySelector('#tirar');
-const ultimasJugadas = document.querySelector('#ultimasJugadas');
+const ultimaJugada = document.querySelector('#ultimaJugada');
+
+let ultimasJugadas = [];
 
 tirar.addEventListener('click', ()=>{
     let dado = [{numero: 1, color: "rojo", pareja: "impar"},
@@ -45,4 +47,22 @@ tirar.addEventListener('click', ()=>{
             break;
         }
     }
+    numero.textContent = tirada;
+    
+    ultimasJugadas.push(tirada);
+    if(ultimasJugadas.length > 5){
+        ultimasJugadas.shift();
+    }
+
+    actualizarJugadas();
 })
+
+function actualizarJugadas() {
+    ultimaJugada.innerHTML = "";
+    
+    for(let i = ultimasJugadas.length -1; i >= 0; i--){
+        let jugadaHTML = document.createElement('li');
+        jugadaHTML.textContent = `Tirada: ${ultimasJugadas[i]}`;
+        ultimaJugada.appendChild(jugadaHTML);
+    }
+}
