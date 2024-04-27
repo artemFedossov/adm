@@ -1,3 +1,10 @@
+/* Estilos de reinicio, se restablecen los margenes, rellenos y el modelo de caja */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -6,6 +13,12 @@ main {
 header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .bloque {
@@ -26,4 +39,20 @@ header {
 .columnApuesta {
     display: flex;
     flex-direction: column;
+}
+
+.bordes {
+    border: #39ff14 1px solid;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+
+.modo-oscuro {
+    background-color: black;
+    color: white;
+}
+
+.bi {
+    cursor: pointer;
 }
