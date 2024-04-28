@@ -5,42 +5,6 @@
     box-sizing: border-box;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-}
-
-header {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
-h1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.bloque {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-#clima {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-#dado {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
-.columnApuesta {
-    display: flex;
-    flex-direction: column;
-}
-
 .bordes {
     border: #39ff14 1px solid;
     margin: 0.5rem;
@@ -53,6 +17,133 @@ h1 {
     color: white;
 }
 
+.centrar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.columna {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
 .bi {
     cursor: pointer;
 }
+
+.inputNombre {
+    cursor: default;
+    border: none;
+    outline: none;
+    background-color: inherit;
+    color: inherit;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.posicionIcono {
+    display: flex;
+    justify-content: right;
+    margin-bottom: 50px;
+    margin-right: 50px;
+}
+
+.contenedorColor {
+    background-color: inherit;
+    color: inherit;
+    border: none;
+}
+
+.bloque {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#clima {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    padding-top: 2rem;
+}
+
+
+.contenedorTraductor {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+textarea {
+    background-color: inherit;
+    color: inherit;
+    resize: none;
+}
+
+select {
+    background-color: inherit;
+    color: inherit;
+    border-radius: 0.5rem;
+}
+
+option {
+    color: black;
+}
+
+.posicionTexto {
+    margin-top: 1.3rem;
+}
+
+#dado {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.columnApuesta {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    background-color: inherit;
+    color: inherit;
+    text-transform: uppercase;
+}
+
+#convertidor {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+input {
+    background-color: inherit;
+    color: inherit;
+}
+
+.contenedorDado {
+    display: flex;
+    flex-direction: column;
+}
+
+.tituloDado {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.dadoSalido {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+

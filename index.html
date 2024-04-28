@@ -13,52 +13,53 @@
 
     <main>
         <header class="bordes">
-            <h1>A.D.M.</h1>
-            <div>
-                <h2>Bienvenido </h2>
-                <input id="nombre" type="text">
+            <h1 class="centrar">A.D.M.</h1>
+            <div class="centrar columna">
+                <h2>Bienvenido! </h2>
+                <input id="nombre" type="text" readonly class="inputNombre">
                 <div id="fecha"></div>
             </div>
-            <div id="btnColor" class="contenedorColor">
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-sun"
-                    viewBox="0 0 16 16">
-                    <path
-                        d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708" />
-                </svg>
+            <div class="posicionIcono">
+                <button id="btnColor" class="contenedorColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-sun"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708" />
+                    </svg>
+                </button>
             </div>
         </header>
 
         <div class="bloque">
             <div class="bordes" id="clima">
             </div>
-            <div class="bordes" id="traductor">
-                <textarea name="texto" id="entradaTexto" cols="20" rows="4"></textarea>
-                <textarea name="texto traducido" id="salidaTexto" readonly cols="20" rows="4"></textarea>
-                <select name="ideoma" id="selectA">
-                    <option value="">Seleccione Ideoma</option>
+            <div class="bordes contenedorTraductor" id="traductor">
+                <textarea name="texto" id="entradaTexto" class="bordes" cols="20" rows="4"></textarea>
+                <textarea name="texto traducido" id="salidaTexto" class="bordes" readonly cols="20" rows="4"></textarea>
+                <select name="idioma" id="selectA" class="bordes">
+                    <option value="">Seleccione Idioma</option>
                 </select>
-                <select name="ideoma" id="selectB">
-                    <option value="">Seleccione Ideoma</option>
+                <select name="idioma" id="selectB" class="bordes">
+                    <option value="">Seleccione Idioma</option>
                 </select>
-                <button id="traducir">Traducir</button>
+                <button class="bordes" id="traducir">Traducir</button>
             </div>
             <div class="bordes" id="convertidor">
-                <select name="moneda" id="monedaA">
+                <select name="moneda" id="monedaA" class="bordes">
                     <option value="">Selecciones Moneda</option>
                 </select>
-                <input type="number" id="entradaMoneda">
-                <select name="moneda" id="monedaB">
+                <input type="number" id="entradaMoneda" class="bordes">
+                <select name="moneda" id="monedaB" class="bordes">
                     <option value="">Selecciones Moneda</option>
                 </select>
-                <input type="number" id="salidaMoneda" readonly>
+                <input type="number" id="salidaMoneda" class="bordes" readonly>
             </div>
             <div class="bordes" id="dado">
                 <div class="columnApuesta">
-                    <label for="" id="saldo">3000</label>
-                    <label for="">Apuesta</label>
-                    <input type="number" id="apuesta">
-                    <label for="">Jugada</label>
-                    <select id="jugada">
+                    <label class="bordes" id="saldo">3000 Monedas</label>
+                    <input class="bordes" type="number" id="apuesta" placeholder="Apuesta">
+                    <select class="bordes" id="jugada">
+                        <option value="">Jugada</option>
                         <option value="negro">Negro</option>
                         <option value="rojo">Rojo</option>
                         <option value="par">Par</option>
@@ -71,11 +72,11 @@
                         <option value="6">6</option>
                     </select>
                 </div>
-                <div>
-                    <p>Mini Juego</p>
-                    <div id="numero"></div>
+                <div class="contenedorDado">
+                    <p class="tituloDado">Mini Juego</p>
+                    <div id="numero" class="dadoSalido"></div>
                     <img src="" alt="">
-                    <button id="tirar">Suerte</button>
+                    <button class="bordes" id="tirar">Suerte</button>
                 </div>
                 <div>
                     <p>ultimas jugadas</p>

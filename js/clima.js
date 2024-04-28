@@ -13,11 +13,12 @@ fetch(url)
     .then(data => {
         let iconos = data.day1.icon;
         icono.setAttribute('src', `https://v5i.tutiempo.net/wi/01/50/${iconos}.png`);
-        temMax.textContent = data.day1.temperature_max + " °C";
-        temMin.textContent = data.day1.temperature_min + " °C";
-        viento.textContent = data.day1.wind + " Km/h";
-        humedad.textContent = data.day1.humidity + " %";
+        temMax.textContent = data.day1.temperature_max + " °C  Temperatura Maxima";
+        temMin.textContent = data.day1.temperature_min + " °C  Temperatura Minima";
+        viento.textContent = "Viento " + data.day1.wind + " Km/h";
+        humedad.textContent = "Humedad " + data.day1.humidity + " %";
         descripcion.textContent = data.day1.text;
+        descripcion.className = "posicionTexto";
 
         clima.appendChild(icono);
         clima.appendChild(descripcion)

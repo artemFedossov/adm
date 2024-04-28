@@ -44,7 +44,6 @@ fetch(getSimbolo, options)
 				monedaB.appendChild(divisaB);
 			}
 		};
-
 	})
 
 fetch(getCambio, options)
@@ -59,7 +58,7 @@ fetch(getCambio, options)
 			this.timer = setTimeout(() => {
 				calcularConversion(aux);
 				entradaMoneda.blur();
-			}, 8000);
+			}, 5000);
 			
 		})
 		

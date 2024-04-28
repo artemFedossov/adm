@@ -8,12 +8,12 @@ const ultimaJugada = document.querySelector('#ultimaJugada');
 let ultimasJugadas = [];
 
 tirar.addEventListener('click', ()=>{
-    let dado = [{numero: 1, color: "rojo", pareja: "impar"},
-                {numero: 2, color: "negro", pareja: "par"},
-                {numero: 3, color: "negro", pareja: "impar"},
-                {numero: 4, color: "rojo", pareja: "par"},
-                {numero: 5, color: "rojo", pareja: "impar"},
-                {numero: 6, color: "negro", pareja: "par"}];
+    let dado = [{numero: "1", color: "rojo", pareja: "impar"},
+                {numero: "2", color: "negro", pareja: "par"},
+                {numero: "3", color: "negro", pareja: "impar"},
+                {numero: "4", color: "rojo", pareja: "par"},
+                {numero: "5", color: "rojo", pareja: "impar"},
+                {numero: "6", color: "negro", pareja: "par"}];
     
     let tirada = Math.floor(Math.random()*6)+1;
     let multiplicador = 0;
@@ -28,7 +28,7 @@ tirar.addEventListener('click', ()=>{
     }
     
     caja = caja - parseInt(apuesta.value);
-    saldo.textContent = caja;
+    saldo.textContent = caja + " Monedas";
 
     if((jugada.value === "rojo") || (jugada.value === "negro") ||
        (jugada.value === "par") || (jugada.value === "impar")){
@@ -40,10 +40,9 @@ tirar.addEventListener('click', ()=>{
     for (let propiedad in jugadaGanadora){
 
         if(jugadaGanadora[propiedad] === jugada.value){
-            console.log("ganaste")
-            resultado = parseInt(apuesta.value) * multiplicador
-            caja = caja + resultado
-            saldo.textContent = caja;
+            resultado = parseInt(apuesta.value) * multiplicador;
+            caja = caja + resultado;
+            saldo.textContent = caja + " Monedas";
             break;
         }
     }
