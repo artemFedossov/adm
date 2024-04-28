@@ -30,8 +30,8 @@ fetch(getUrl, optionsGet)
 
 		lenguajes.forEach(function (lenguaje) {
 			if ((lenguaje.code === "en") || (lenguaje.code === "fr") ||
-			(lenguaje.code === "it") || (lenguaje.code === "pt") ||
-			(lenguaje.code === "ru") || (lenguaje.code === "es")) {
+				(lenguaje.code === "it") || (lenguaje.code === "pt") ||
+				(lenguaje.code === "ru") || (lenguaje.code === "es")) {
 				opcionA = document.createElement('option')
 				opcionB = document.createElement('option')
 				opcionA.textContent = lenguaje.name;
@@ -73,5 +73,15 @@ botonTraducir.addEventListener('click', () => {
 		.then(data => {
 			salidaTexto.value = data.data.translatedText;
 		})
-		.catch(err => console.log(err));
+		.catch(err => {
+
+			if ((selectA.value === "Seleccione Idioma") || (selectB.value === "Seleccione Idioma")) {
+				Swal.fire({
+					title: "No se pudo traducir",
+					text: "Seleccione un Idioma",
+					icon: "error"
+				});
+
+			}
+		});
 })

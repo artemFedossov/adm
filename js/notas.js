@@ -8,6 +8,7 @@ btnAgregar.addEventListener('click', ()=>{
     let nuevaNota = document.createElement('input');
     nuevaNota.type = "text";
     nuevaNota.className = "nota";
+    nuevaNota.className = "bordes";
     contenedor.appendChild(nuevaNota);
     bloqueNotas.push(nuevaNota);
 })

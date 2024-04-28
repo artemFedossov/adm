@@ -37,29 +37,29 @@
                 <textarea name="texto" id="entradaTexto" class="bordes" cols="20" rows="4"></textarea>
                 <textarea name="texto traducido" id="salidaTexto" class="bordes" readonly cols="20" rows="4"></textarea>
                 <select name="idioma" id="selectA" class="bordes">
-                    <option value="">Seleccione Idioma</option>
+                    <option value="Seleccione Idioma">Seleccione Idioma</option>
                 </select>
                 <select name="idioma" id="selectB" class="bordes">
-                    <option value="">Seleccione Idioma</option>
+                    <option value="Seleccione Idioma">Seleccione Idioma</option>
                 </select>
                 <button class="bordes" id="traducir">Traducir</button>
             </div>
             <div class="bordes" id="convertidor">
                 <select name="moneda" id="monedaA" class="bordes">
-                    <option value="">Selecciones Moneda</option>
+                    <option value="Selecciones Moneda">Selecciones Moneda</option>
                 </select>
                 <input type="number" id="entradaMoneda" class="bordes">
                 <select name="moneda" id="monedaB" class="bordes">
-                    <option value="">Selecciones Moneda</option>
+                    <option value="Selecciones Moneda">Selecciones Moneda</option>
                 </select>
                 <input type="number" id="salidaMoneda" class="bordes" readonly>
             </div>
             <div class="bordes" id="dado">
                 <div class="columnApuesta">
-                    <label class="bordes" id="saldo">3000 Monedas</label>
+                    <label class="bordes" id="saldo">10000 Monedas</label>
                     <input class="bordes" type="number" id="apuesta" placeholder="Apuesta">
                     <select class="bordes" id="jugada">
-                        <option value="">Jugada</option>
+                        <option value="jugada">Jugada</option>
                         <option value="negro">Negro</option>
                         <option value="rojo">Rojo</option>
                         <option value="par">Par</option>
@@ -74,29 +74,29 @@
                 </div>
                 <div class="contenedorDado">
                     <p class="tituloDado">Mini Juego</p>
-                    <div id="numero" class="dadoSalido"></div>
-                    <img src="" alt="">
+                    <img id="numero" class="dadoSalido" src="" alt="">
                     <button class="bordes" id="tirar">Suerte</button>
                 </div>
                 <div>
-                    <p>ultimas jugadas</p>
-                    <ul id="ultimaJugada"></ul>
+                    <p class="tituloDado">ultimas jugadas</p>
+                    <ul id="ultimaJugada" class="columna centrar contenedoJugadas"></ul>
                 </div>
             </div>
         </div>
 
         <div class="bordes">
-            <p>notas</p>
-            <div id="contenedor">
+            <p>Notas:</p>
+            <div class="columna contenedorNotas" id="contenedor">
             </div>
-            <button id="agregar">+</button>
-            <button id="borrar">x</button>
+            <button class="bordes" id="agregar">Agregar</button>
+            <button class="bordes" id="borrar">borrar</button>
         </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="js/clima.js"></script>
-    <script src="js/traductor.js"></script>
-    <script src="js/convertidor.js"></script>
+     <script src="js/clima.js"></script>
+        <script src="js/traductor.js"></script>
+        <script src="js/convertidor.js"></script> 
+    
     <script src="js/dado.js"></script>
     <script src="js/notas.js"></script>
     <script src="js/header.js"></script>
