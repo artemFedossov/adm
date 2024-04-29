@@ -4,23 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título de la página -->
     <title>Agenda Digital Multifunción</title>
+    <!-- Enlace a la hoja de estilos de Bootstrap y al archivo de CSS -->
     <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="modo-oscuro">
-
     <main>
+        
         <header class="bordes">
+            <!-- Título de la página principal -->
             <h1 class="centrar">A.D.M.</h1>
             <div class="centrar columna">
+                <!-- Mensaje de bienvenida y campo de entra para el nombre del usuario -->
                 <h2>Bienvenido! </h2>
                 <input id="nombre" type="text" readonly class="inputNombre">
+                <!-- Contenedor para mostrar la fecha actual -->
                 <div id="fecha"></div>
             </div>
+            <!-- Botón para cambiar entre el modo claro/oscuro -->
             <div class="posicionIcono">
                 <button id="btnColor" class="contenedorColor">
+                    <!-- Icono del sol -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-sun"
                         viewBox="0 0 16 16">
                         <path
@@ -30,34 +37,51 @@
             </div>
         </header>
 
+        <!-- Bloque que contiene las diferentes herramientas  -->
         <div class="bloque">
+            <!-- Sección para mostrar el clima -->
             <div class="bordes" id="clima">
             </div>
+            <!-- Sección para el traductor -->
             <div class="bordes contenedorTraductor" id="traductor">
+                <!-- Entrada de texto para traducir -->
                 <textarea name="texto" id="entradaTexto" class="bordes" cols="20" rows="4"></textarea>
+                <!-- Salida de texto traducido -->
                 <textarea name="texto traducido" id="salidaTexto" class="bordes" readonly cols="20" rows="4"></textarea>
+                <!-- Selección de idiomas para la traducción -->
                 <select name="idioma" id="selectA" class="bordes">
                     <option value="Seleccione Idioma">Seleccione Idioma</option>
                 </select>
                 <select name="idioma" id="selectB" class="bordes">
                     <option value="Seleccione Idioma">Seleccione Idioma</option>
                 </select>
+                <!-- Botón para realizar la traducción -->
                 <button class="bordes" id="traducir">Traducir</button>
             </div>
+            <!-- Sección para el convertidor de moneda -->
             <div class="bordes" id="convertidor">
+                <!-- Selección de Moneda base -->
                 <select name="moneda" id="monedaA" class="bordes">
                     <option value="Selecciones Moneda">Selecciones Moneda</option>
                 </select>
+                <!-- Entrada de cantidad de monedas a convertir -->
                 <input type="number" id="entradaMoneda" class="bordes">
+                <!-- Selección de Moneda a convertir -->
                 <select name="moneda" id="monedaB" class="bordes">
                     <option value="Selecciones Moneda">Selecciones Moneda</option>
                 </select>
+                <!-- Salida de la cantidad de moneda convertida -->
                 <input type="number" id="salidaMoneda" class="bordes" readonly>
             </div>
+            <!-- Sección para el juego de dados -->
             <div class="bordes" id="dado">
+                <!-- Contenedor para el saldo y la apuesta -->
                 <div class="columnApuesta">
+                    <!-- El saldo Inicial -->
                     <label class="bordes" id="saldo">10000 Monedas</label>
+                    <!-- Entrada de monedas para la apuesta -->
                     <input class="bordes" type="number" id="apuesta" placeholder="Apuesta">
+                    <!-- Selección del tipo de jugada -->
                     <select class="bordes" id="jugada">
                         <option value="jugada">Jugada</option>
                         <option value="negro">Negro</option>
@@ -72,31 +96,40 @@
                         <option value="6">6</option>
                     </select>
                 </div>
+                <!-- Contenedor para el juego -->
                 <div class="contenedorDado">
                     <p class="tituloDado">Mini Juego</p>
+                    <!-- Se genera la imagen del dado que se genero de forma random -->
                     <img id="numero" class="dadoSalido" src="" alt="">
+                    <!-- Botón para tirar el dado -->
                     <button class="bordes" id="tirar">Suerte</button>
                 </div>
                 <div>
+                    <!-- Lista que muestra las ultimas 6 jugadas que salieron -->
                     <p class="tituloDado">ultimas jugadas</p>
                     <ul id="ultimaJugada" class="columna centrar contenedoJugadas"></ul>
                 </div>
             </div>
         </div>
 
+        <!-- Sección para las notas -->
         <div class="bordes">
             <p>Notas:</p>
+            <!-- Contenedor en donde se generan las notas -->
             <div class="columna contenedorNotas" id="contenedor">
             </div>
+            <!-- Botónes de agregar y borrar notas -->
             <button class="bordes" id="agregar">Agregar</button>
             <button class="bordes" id="borrar">borrar</button>
         </div>
     </main>
+
+    <!-- Biblioteca SweetAlert2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-     <script src="js/clima.js"></script>
-        <script src="js/traductor.js"></script>
-        <script src="js/convertidor.js"></script> 
-    
+    <!-- Scripts personalizados para las funcionalidades  -->
+    <script src="js/clima.js"></script>
+    <script src="js/traductor.js"></script>
+    <script src="js/convertidor.js"></script>
     <script src="js/dado.js"></script>
     <script src="js/notas.js"></script>
     <script src="js/header.js"></script>
