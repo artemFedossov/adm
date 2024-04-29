@@ -14,7 +14,7 @@
 <body class="modo-oscuro">
     <main>
         
-        <header class="bordes">
+        <header class="bordes grilla3">
             <!-- Título de la página principal -->
             <h1 class="centrar">A.D.M.</h1>
             <div class="centrar columna">
@@ -38,12 +38,12 @@
         </header>
 
         <!-- Bloque que contiene las diferentes herramientas  -->
-        <div class="bloque">
+        <div class="grilla2">
             <!-- Sección para mostrar el clima -->
             <div class="bordes" id="clima">
             </div>
             <!-- Sección para el traductor -->
-            <div class="bordes contenedorTraductor" id="traductor">
+            <div class="bordes grilla2" id="traductor">
                 <!-- Entrada de texto para traducir -->
                 <textarea name="texto" id="entradaTexto" class="bordes" cols="20" rows="4"></textarea>
                 <!-- Salida de texto traducido -->
@@ -59,7 +59,7 @@
                 <button class="bordes" id="traducir">Traducir</button>
             </div>
             <!-- Sección para el convertidor de moneda -->
-            <div class="bordes" id="convertidor">
+            <div class="bordes grilla2" id="convertidor">
                 <!-- Selección de Moneda base -->
                 <select name="moneda" id="monedaA" class="bordes">
                     <option value="Selecciones Moneda">Selecciones Moneda</option>
@@ -74,9 +74,9 @@
                 <input type="number" id="salidaMoneda" class="bordes" readonly>
             </div>
             <!-- Sección para el juego de dados -->
-            <div class="bordes" id="dado">
+            <div class="bordes grilla3" id="dado">
                 <!-- Contenedor para el saldo y la apuesta -->
-                <div class="columnApuesta">
+                <div class="columna">
                     <!-- El saldo Inicial -->
                     <label class="bordes" id="saldo">10000 Monedas</label>
                     <!-- Entrada de monedas para la apuesta -->
@@ -107,7 +107,7 @@
                 <div>
                     <!-- Lista que muestra las ultimas 6 jugadas que salieron -->
                     <p class="tituloDado">ultimas jugadas</p>
-                    <ul id="ultimaJugada" class="columna centrar contenedoJugadas"></ul>
+                    <ul id="ultimaJugada" class="columna centrar grilla2"></ul>
                 </div>
             </div>
         </div>
@@ -116,7 +116,7 @@
         <div class="bordes">
             <p>Notas:</p>
             <!-- Contenedor en donde se generan las notas -->
-            <div class="columna contenedorNotas" id="contenedor">
+            <div class="columna grilla3" id="contenedor">
             </div>
             <!-- Botónes de agregar y borrar notas -->
             <button class="bordes" id="agregar">Agregar</button>

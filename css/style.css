@@ -1,10 +1,23 @@
-/* Estilos de reinicio, se restablecen los margenes, rellenos y el modelo de caja */
+/*** General ***/
+
+/* Estilos de reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
+/* Estilos para los botones */
+button {
+    background-color: inherit;
+    color: inherit;
+    text-transform: uppercase;
+}
+/* Estilos para los inputs */
+input {
+    background-color: inherit;
+    color: inherit;
+}
+/* Estilos para los bordes*/
 .bordes {
     border: #39ff14 1px solid;
     margin: 0.5rem;
@@ -12,37 +25,68 @@
     border-radius: 1rem;
     box-shadow: 0 0 15px rgba(57, 255, 20, 0.7);
 }
-
-.modo-oscuro {
-    background-color: black;
-    color: white;
-}
-
+/* Estilos para centrar elementos */
 .centrar {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
+/* Estilos para columnas */
 .columna {
     display: flex;
     flex-direction: column;
 }
-
-main {
-    display: flex;
-    flex-direction: column;
-}
-
-header {
+/* Estilos para grillas de 3 columnas */
+.grilla3 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
+/* Estilos para grillas de 2 columnas */
+.grilla2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+/* Estilos para los selectores */
+select {
+    background-color: inherit;
+    color: inherit;
+    border-radius: 0.5rem;
+}
+/* Estilos para las opciones dentro de los selectores */
+option {
+    color: black;
+}
 
+
+/* header */
+/* Estilos para posicionar el icono sol/luna */
+.posicionIcono {
+    display: flex;
+    justify-content: right;
+    margin-bottom: 50px;
+    margin-right: 50px;
+}
+
+/* Cambia el cursor a una mano cuando se pasa sobre el icono */
 .bi {
     cursor: pointer;
 }
 
+/* Estilos para el contenedor de los iconos */
+.contenedorColor {
+    background-color: inherit;
+    color: inherit;
+    border: none;
+}
+
+/* Estilo para cambiar oscuro/claro */
+.modo-oscuro {
+    background-color: black;
+    color: white;
+}
+
+
+/* Estilos del input usuarios */
 .inputNombre {
     cursor: default;
     border: none;
@@ -53,24 +97,8 @@ header {
     text-align: center;
 }
 
-.posicionIcono {
-    display: flex;
-    justify-content: right;
-    margin-bottom: 50px;
-    margin-right: 50px;
-}
-
-.contenedorColor {
-    background-color: inherit;
-    color: inherit;
-    border: none;
-}
-
-.bloque {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
+/* clima */
+/* Estilos para el contenedor de clima */
 #clima {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -78,81 +106,40 @@ header {
     padding-top: 2rem;
 }
 
-
-.contenedorTraductor {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+/* Estilos para la posición del texto dentro del contenedor de clima */
+.posicionTexto {
+    margin: 1.5rem;
 }
 
+/* traductor */
+
+/* Estilos para el text area del traductor */
 textarea {
     background-color: inherit;
     color: inherit;
     resize: none;
 }
 
-select {
-    background-color: inherit;
-    color: inherit;
-    border-radius: 0.5rem;
-}
 
-option {
-    color: black;
-}
 
-.posicionTexto {
-    margin-top: 1.3rem;
-}
 
-#dado {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
 
-.columnApuesta {
-    display: flex;
-    flex-direction: column;
-}
-
-button {
-    background-color: inherit;
-    color: inherit;
-    text-transform: uppercase;
-}
-
-#convertidor {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-input {
-    background-color: inherit;
-    color: inherit;
-}
-
+/* dado */
+/* Estilos para el contenedor del dado */
 .contenedorDado {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* Estilos para el título del dado */
 .tituloDado {
     display: flex;
     justify-content: center;
     text-transform: uppercase;
 }
 
-.dadoSalido {
-    display: flex;
-    justify-content: center;
-    text-transform: uppercase;
-}
-
-.contenedorNotas {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
+/* Estilos para el dado */
 .dadoSalido {
     width: 40px;
     border: white 1px solid;
@@ -160,9 +147,7 @@ input {
     background-color: white;
     display: flex;
     margin-bottom: 1rem;
-}
-
-.contenedoJugadas {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
 }
