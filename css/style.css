@@ -66,26 +66,21 @@ option {
     margin-bottom: 50px;
     margin-right: 50px;
 }
-
 /* Cambia el cursor a una mano cuando se pasa sobre el icono */
 .bi {
     cursor: pointer;
 }
-
 /* Estilos para el contenedor de los iconos */
 .contenedorColor {
     background-color: inherit;
     color: inherit;
     border: none;
 }
-
 /* Estilo para cambiar oscuro/claro */
 .modo-oscuro {
     background-color: black;
     color: white;
 }
-
-
 /* Estilos del input usuarios */
 .inputNombre {
     cursor: default;
@@ -105,14 +100,12 @@ option {
     justify-items: center;
     padding-top: 2rem;
 }
-
 /* Estilos para la posición del texto dentro del contenedor de clima */
 .posicionTexto {
     margin: 1.5rem;
 }
 
 /* traductor */
-
 /* Estilos para el text area del traductor */
 textarea {
     background-color: inherit;
@@ -120,9 +113,10 @@ textarea {
     resize: none;
 }
 
-
-
-
+.dimension {
+    height: 3.5rem;
+    align-self: center;
+}
 
 /* dado */
 /* Estilos para el contenedor del dado */
@@ -131,14 +125,12 @@ textarea {
     flex-direction: column;
     align-items: center;
 }
-
 /* Estilos para el título del dado */
 .tituloDado {
     display: flex;
     justify-content: center;
     text-transform: uppercase;
 }
-
 /* Estilos para el dado */
 .dadoSalido {
     width: 40px;
@@ -151,3 +143,30 @@ textarea {
     justify-content: center;
     text-transform: uppercase;
 }
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 767px) {
+    .grilla2 {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .grilla3 {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .mobile {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .dadoSalido {
+        margin: 0 4px;
+    }
+    .posicionIcono {
+      justify-content: center;
+      margin-bottom: 20px;
+      margin-top: 10px;
+      margin-right: 10px;
+
+    }
+  }

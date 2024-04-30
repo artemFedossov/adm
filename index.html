@@ -61,17 +61,17 @@
             <!-- Sección para el convertidor de moneda -->
             <div class="bordes grilla2" id="convertidor">
                 <!-- Selección de Moneda base -->
-                <select name="moneda" id="monedaA" class="bordes">
+                <select name="moneda" id="monedaA" class="bordes dimension">
                     <option value="Selecciones Moneda">Selecciones Moneda</option>
                 </select>
                 <!-- Entrada de cantidad de monedas a convertir -->
-                <input type="number" id="entradaMoneda" class="bordes">
+                <input type="number" id="entradaMoneda" class="bordes dimension">
                 <!-- Selección de Moneda a convertir -->
-                <select name="moneda" id="monedaB" class="bordes">
+                <select name="moneda" id="monedaB" class="bordes dimension">
                     <option value="Selecciones Moneda">Selecciones Moneda</option>
                 </select>
                 <!-- Salida de la cantidad de moneda convertida -->
-                <input type="number" id="salidaMoneda" class="bordes" readonly>
+                <input type="number" id="salidaMoneda" class="bordes dimension" readonly>
             </div>
             <!-- Sección para el juego de dados -->
             <div class="bordes grilla3" id="dado">
@@ -107,7 +107,7 @@
                 <div>
                     <!-- Lista que muestra las ultimas 6 jugadas que salieron -->
                     <p class="tituloDado">ultimas jugadas</p>
-                    <ul id="ultimaJugada" class="columna centrar grilla2"></ul>
+                    <ul id="ultimaJugada" class="columna centrar grilla2 mobile"></ul>
                 </div>
             </div>
         </div>
@@ -127,9 +127,9 @@
     <!-- Biblioteca SweetAlert2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Scripts personalizados para las funcionalidades  -->
-    <script src="js/clima.js"></script>
+    <!-- <script src="js/clima.js"></script>
     <script src="js/traductor.js"></script>
-    <script src="js/convertidor.js"></script>
+    <script src="js/convertidor.js"></script> -->
     <script src="js/dado.js"></script>
     <script src="js/notas.js"></script>
     <script src="js/header.js"></script>

@@ -95,4 +95,16 @@ function actualizarJugadas() {
         jugadaHTML.setAttribute("class", "dadoSalido");
         ultimaJugada.appendChild(jugadaHTML);
     }
+    localStorage.setItem('ultimasJugadas', JSON.stringify(ultimasJugadas));
 }
+
+/* Este código espera a que el DOM esté completamente cargado y luego verifica si hay datos almacenados en el localStorage */
+document.addEventListener("DOMContentLoaded", function() {
+    // Verificar si hay datos almacenados en localStorage
+    if(localStorage.getItem('ultimasJugadas')) {
+        // Si hay datos, cargar las últimas 6 jugadas
+        ultimasJugadas = JSON.parse(localStorage.getItem('ultimasJugadas'));
+        // Actualizar la visualización del historial de jugadas
+        actualizarJugadas();
+    }
+});

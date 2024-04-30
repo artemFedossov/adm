@@ -6,6 +6,9 @@ const contenedorColor = document.querySelector('.contenedorColor');
 const svg = document.querySelector('.bi');
 const body = document.body;
 
+// Verifica si en el local Storage esta almacenado el usuario
+usuario.value = JSON.parse(localStorage.getItem('nombre'))
+
 // Diálogo modal para ingresar el nombre del usuario
 Swal.fire({
   title: 'Ingrese su nombre:',
@@ -24,6 +27,7 @@ Swal.fire({
     const nombre = result.value;
     if (nombre) {
       usuario.value = nombre;
+      localStorage.setItem('nombre',JSON.stringify(usuario.value))
     }
   }
 });
